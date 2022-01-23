@@ -1,0 +1,44 @@
+package com.google.android.gms.internal.auth;
+
+import android.accounts.Account;
+import android.os.RemoteException;
+import com.google.android.gms.auth.account.C0025zzb;
+import com.google.android.gms.auth.account.C0027zzd;
+import com.google.android.gms.common.annotation.C0206KeepForSdk;
+import com.google.android.gms.common.api.C0211Api;
+import com.google.android.gms.common.api.C0222GoogleApiClient;
+import com.google.android.gms.common.api.C0231Result;
+import com.google.android.gms.common.api.C0236Status;
+import com.google.android.gms.common.api.internal.C0243BaseImplementation;
+
+/* renamed from: com.google.android.gms.internal.auth.zzaj */
+/* compiled from: com.google.android.gms:play-services-auth-base@@17.1.2 */
+final class C0786zzaj extends C0243BaseImplementation.ApiMethodImpl<C0231Result, C0791zzao> {
+    private final /* synthetic */ Account zza;
+
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    C0786zzaj(C0782zzaf zzaf, C0211Api api, C0222GoogleApiClient googleApiClient, Account account) {
+        super((C0211Api<?>) api, googleApiClient);
+        C0782zzaf zzaf2 = zzaf;
+        this.zza = account;
+    }
+
+    /* access modifiers changed from: protected */
+    public final C0231Result createFailedResult(C0236Status status) {
+        C0231Result result;
+        new C0789zzam(status);
+        return result;
+    }
+
+    /* access modifiers changed from: protected */
+    public final /* synthetic */ void doExecute(C0211Api.AnyClient anyClient) throws RemoteException {
+        C0025zzb zzb;
+        new C0785zzai(this);
+        ((C0027zzd) ((C0791zzao) anyClient).getService()).zza(zzb, this.zza);
+    }
+
+    @C0206KeepForSdk
+    public final /* bridge */ /* synthetic */ void setResult(Object obj) {
+        super.setResult((C0231Result) obj);
+    }
+}

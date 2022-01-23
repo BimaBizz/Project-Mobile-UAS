@@ -1,0 +1,20 @@
+package com.google.firebase.components;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+import androidx.annotation.Nullable;
+import com.google.android.gms.common.annotation.C0206KeepForSdk;
+
+@C0206KeepForSdk
+/* compiled from: com.google.firebase:firebase-common@@17.1.0 */
+public class ComponentDiscoveryService extends Service {
+    public ComponentDiscoveryService() {
+    }
+
+    @Nullable
+    public IBinder onBind(Intent intent) {
+        Intent intent2 = intent;
+        return null;
+    }
+}
